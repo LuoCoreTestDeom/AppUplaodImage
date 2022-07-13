@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/abc_action_bar_icon_vertical_padding_material">
+
+
+    <GridView
+        android:layout_marginTop="10dp"
+        android:id="@+id/gw"
+        android:numColumns="3"
+        android:horizontalSpacing="6dp"
+        android:columnWidth="100dp"
+        android:layout_width="match_parent"
+        android:layout_height="200dp" />
+    <Button
+        android:id="@+id/Btn_Upload"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_gravity="center_horizontal"
+        android:text="上传"
+        android:textSize="20dp"/>
+    <ImageView
+        android:id="@+id/ImageTest"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:scaleType="centerCrop"
+        android:contentDescription="description" />
+
+</LinearLayout>
