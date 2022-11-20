@@ -25,7 +25,7 @@ namespace AppUplaodImage.Assets
          * 可以动态设置最多上传几张，之后就不显示+号了，用户也无法上传了
          * 默认9张
          */
-        private int maxImages = 4;
+        private int maxImages = 99;
 
 
         public GridViewAddImgesAdpter(JavaList<IDictionary<string, object>> datas, Context context)

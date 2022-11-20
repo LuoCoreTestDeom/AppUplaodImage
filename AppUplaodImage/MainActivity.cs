@@ -254,10 +254,22 @@ namespace AppUplaodImage
         /// </summary>
         public void PhoneSelectionPhoto()
         {
-            Intent intent = new Intent(
-                    Intent.ActionPick,
-                    MediaStore.Images.Media.ExternalContentUri);
-            StartActivityForResult(intent, PHOTO_REQUEST_GALLERY);
+
+            //Intent intent = new Intent(MediaStore.ACTION_PICK_IMAGES);
+            //intent.putExtra(MediaStore.EXTRA_PICK_IMAGES_MAX, maxNumPhotosAndVideos);
+            //startActivityForResult(intent, PHOTO_PICKER_MULTI_SELECT_REQUEST_CODE);
+
+          
+            Intent iet= new Intent();
+            iet.SetType("image/*");
+            iet.PutExtra(Intent.ExtraAllowMultiple, true);
+            iet.SetAction(Intent.ActionGetContent);
+            StartActivityForResult(Intent.CreateChooser(iet, "Select Picture"), PHOTO_REQUEST_GALLERY);
+
+            //Intent intent = new Intent(
+            //        Intent.ActionPick,
+            //        MediaStore.Images.Media.ExternalContentUri);
+            //StartActivityForResult(intent, PHOTO_REQUEST_GALLERY);
         }
 
         public void photoPath(String path)
